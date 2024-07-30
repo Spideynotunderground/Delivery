@@ -1,0 +1,52 @@
+{% load socialaccount %}
+{% load i18n %}
+{% block auth %}
+
+    {% load static %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign In</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+    <div class="container">
+        <div class="auth-form">
+            {% if messages %}
+                <ul class="message-header">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <form method="post">
+                <h1 class="title">Sign In</h1>
+                {% csrf_token %}
+                {% if form.errors %}
+                    <div class="error-messages">
+                        {{ form.errors }}
+                    </div>
+                {% endif %}
+                {% for field in form %}
+                    <div class="input-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <button type="submit" class="btn-submit">Sign in</button>
+                <a href="{% provider_login_url 'google' %}">Sign in with Google</a>
+                <p class="signup-prompt">
+                    Don't have an account? <a href="{% url 'users:sign_up' %}">Sign up here</a>
+                </p>
+            </form>
+
+        </div>
+    </div>
+    </body>
+    </html>
+
+{% endblock %}

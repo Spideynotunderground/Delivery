@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-24 18:55+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\templates\home.html:41
+msgid "Sign up with GitHub"
+msgstr "Зарегистрируйтесь через GitHub"
+
+#: .\templates\home.html:43
+msgid "Sign up with GitLab"
+msgstr "Зарегистрируйтесь через GitLab"
+
+#: .\templates\home.html:44
+msgid "Sign up with Email"
+msgstr "Зарегистрируйтесь через электронную почту"
+
+#: .\templates\home.html:48
+msgid "Sign Out"
+msgstr "Выйти из аккаунта"
+
+#: .\templates\home.html:60
+msgid "Main"
+msgstr "Главная"
+
+#: .\templates\home.html:61
+msgid "For clients"
+msgstr "Для клиентов"
+
+#: .\templates\home.html:62
+msgid "Services"
+msgstr "Услуги"
+
+#: .\templates\home.html:63 .\templates\home.html:900
+msgid "Partnership"
+msgstr "Партнерство"
+
+#: .\templates\home.html:64
+msgid "About"
+msgstr "О нас"
+
+#: .\templates\home.html:65 .\templates\home.html:915
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\templates\home.html:66 .\templates\home.html:909
+msgid "Vacancies"
+msgstr "Вакансии"
+
+#: .\templates\home.html:105 .\templates\home.html:873
+msgid "Calculate the cost of the service"
+msgstr "Рассчитать стоимость услуги"
+
+#: .\templates\home.html:109
+msgid "Courier call"
+msgstr "Вызов курьера"
+
+#: .\templates\home.html:113
+msgid "Telegram Bot"
+msgstr "Телеграм-бот"
+
+#: .\templates\home.html:117
+msgid "Observe order status"
+msgstr "Наблюдать за статусом заказа"
+
+#: .\templates\home.html:121 .\templates\home.html:879
+msgid "Our offices"
+msgstr "Наши офисы"
+
+#: .\templates\home.html:125 .\templates\home.html:875
+msgid "Contract"
+msgstr "Договор"
+
+msgid "Our Services"
+msgstr "Наши услуги"
+
+#: .\templates\home.html:362
+msgid "For small shipments (up to 20kg)"
+msgstr "Для небольших отправлений (до 20 кг)"
+
+#: .\templates\home.html:368
+msgid "For business owners or carriers of large volumes (more than 20 kg)"
+msgstr "Для владельцев бизнеса или перевозчиков больших объемов (более 20 кг)"
+
+#: .\templates\home.html:374
+msgid ""
+"Now we will pick up the goods from your home or office and deliver to the "
+"address you specified."
+msgstr "Теперь мы заберем товар из вашего дома или офиса и доставим по указанному вами адресу."
+
+#: .\templates\home.html:380
+msgid "With us, storing goods is easier and more profitable!"
+msgstr "С нами хранить товары проще и выгоднее!"
+
+#: .\templates\home.html:386
+msgid "Our company for online stores ..."
+msgstr "Наша компания для интернет-магазинов ..."
+
+#: .\templates\home.html:392
+msgid "Delivery to several countries of the world"
+msgstr "Доставка в несколько стран мира"
+
+#: .\templates\home.html:398
+msgid "DBM company with all its services ..."
+msgstr "Компания DBM со всеми ее услугами..."
+
+#: .\templates\home.html:404
+msgid ""
+"Are you looking for a company to order professional FTL freight "
+"transportation in Uzbekistan?"
+msgstr "Ищете компанию для заказа профессиональных FTL-грузоперевозок в Узбекистане?"
+
+#: .\templates\home.html:410
+msgid ""
+"Do you want to order professional LTL freight shipping in Uzbekistan with "
+"maximum benefit?"
+msgstr "Хотите заказать профессиональную доставку сборных грузов в Узбекистане с максимальной выгодой?"
+
+#: .\templates\home.html:420
+msgid "Our Office"
+msgstr "Наш офис"
+
+#: .\templates\home.html:457 .\templates\home.html:903
+msgid "ABOUT"
+msgstr "ПРО НАС"
+
+#: .\templates\home.html:458
+msgid ""
+"Over the years, DBM Express Cargo Service LLC has cooperated with more than "
+"3000 companies. The company, which started with 1 employee, now has a team "
+"of 410 specialists."
+msgstr "За годы работы компания DBM Express Cargo Service LLC сотрудничала с более чем 3000 компаний. Компания, которая начиналась с 1 сотрудника, сейчас имеет команду из 410 специалистов."
+
+#: .\templates\home.html:464
+msgid "OUR MAIN GOAL"
+msgstr "НАША ГЛАВНАЯ ЦЕЛЬ"
+
+#: .\templates\home.html:465
+msgid ""
+"Connect people and drive business growth in a fast-moving world with "
+"integrated, innovative logistics solutions"
+msgstr "Объединяйте людей и стимулируйте рост бизнеса в быстро меняющемся мире с помощью интегрированных, инновационных логистических решений"
+
+#: .\templates\home.html:474
+msgid "Why do thousands of customers choose us?"
+msgstr "Почему тысячи клиентов выбирают нас?"
+
+#: .\templates\home.html:727
+#, python-format
+msgid "100 percent guarantee"
+msgstr "100 процентная гарантия"
+
+#: .\templates\home.html:728
+msgid ""
+"All items are packaged once. It is guaranteed that the goods will not be "
+"lost or damaged"
+msgstr "Все товары упакованы один раз. Гарантируется, что товар не будет утерян или поврежден"
+
+#: .\templates\home.html:758
+msgid "24/7 at your service"
+msgstr "24/7 к вашим услугам"
+
+#: .\templates\home.html:759
+msgid ""
+"You can send, receive mail or contact the call center at any time of the day "
+"or night. (Except on public holidays)"
+msgstr "Вы можете отправлять, получать почту или обращаться в колл-центр в любое время дня и ночи. (За исключением государственных праздников)"
+
+#: .\templates\home.html:788
+msgid "As soon as possible"
+msgstr "Быстрее некуда!"
+
+#: .\templates\home.html:789
+msgid ""
+"Delivery within Uzbekistan within 24 hours, to international destinations at "
+"any time you specify"
+msgstr "Доставка по Узбекистану в течение 24 часов, по международным направлениям в любое указанное вами время."
+
+#: .\templates\home.html:803
+msgid "Storage conditions"
+msgstr "Условия хранения"
+
+#: .\templates\home.html:804
+msgid ""
+"In our 3900 m2 warehouse, each product is stored in the right conditions."
+msgstr "На нашем складе площадью 3900 м2 каждый продукт хранится в правильных условиях."
+
+#: .\templates\home.html:825
+msgid "Private car park"
+msgstr "Частная парковка"
+
+#: .\templates\home.html:826
+msgid ""
+"We have over 90 different types of vehicles available for customer service."
+msgstr "Для обслуживания клиентов у нас имеется более 90 различных типов транспортных средств."
+
+#: .\templates\home.html:848
+msgid "Free services"
+msgstr "Бесплатные услуги"
+
+#: .\templates\home.html:849
+msgid "Free services. We provide free services of SMS alert, detailing, etc."
+msgstr "Бесплатные услуги. Мы предоставляем бесплатные услуги смс-оповещения, детализации и т.д."
+
+#: .\templates\home.html:857
+msgid "ORDER EASILY"
+msgstr "ЗАКАЗАЖИТЕ ЛЕГКО"
+
+#: .\templates\home.html:858
+msgid "Order easily and conveniently through our official telegram bot"
+msgstr "Заказывайте легко и удобно через наш официальный телеграм-бот"
+
+#: .\templates\home.html:859
+msgid "chat with bot"
+msgstr "чат с ботом"
+
+#: .\templates\home.html:871
+msgid "FOR CLIENTS"
+msgstr "ДЛЯ КЛИЕНТОВ"
+
+#: .\templates\home.html:874
+msgid "Personal cabinet"
+msgstr "Личный кабинет"
+
+#: .\templates\home.html:876
+msgid "Order status"
+msgstr "Статус заказа"
+
+#: .\templates\home.html:877
+msgid "Complaints"
+msgstr "Жалобы"
+
+#: .\templates\home.html:878
+msgid "FAQ"
+msgstr "Часто задаваемые вопросы"
+
+#: .\templates\home.html:880
+msgid "Agreements and general terms"
+msgstr "Соглашения и общие условия"
+
+#: .\templates\home.html:884
+msgid "SERVICES"
+msgstr "УСЛУГИ"
+
+#: .\templates\home.html:886
+msgid "Express mail and parcel"
+msgstr "Экспресс-почта и посылки"
+
+#: .\templates\home.html:887
+msgid "Complex Logistics"
+msgstr "Комплексная логистика"
+
+#: .\templates\home.html:888
+msgid "Courier service"
+msgstr "Курьерская служба"
+
+#: .\templates\home.html:889
+msgid "Warehouse services"
+msgstr "Складские услуги"
+
+#: .\templates\home.html:890
+msgid "E-COMMERCE"
+msgstr "ЭЛЕКТРОННАЯ КОММЕРЦИЯ"
+
+#: .\templates\home.html:891
+msgid "International shipping"
+msgstr "Международная доставка"
+
+#: .\templates\home.html:892
+msgid "Individual transportation"
+msgstr "Индивидуальный транспорт"
+
+#: .\templates\home.html:893
+msgid "FTL shipping"
+msgstr "FTL-доставка"
+
+#: .\templates\home.html:894
+msgid "LTL shipping"
+msgstr "Доставка сборных грузов"
+
+#: .\templates\home.html:898
+msgid "FOR PARTNERS"
+msgstr "ДЛЯ ПАРТНЕРОВ"
+
+#: .\templates\home.html:901
+msgid "API for developers"
+msgstr "API для разработчиков"
+
+#: .\templates\home.html:905
+msgid "About DMB Express"
+msgstr "О DBM Express"
+
+#: .\templates\home.html:906
+msgid "Our completed projects"
+msgstr "Наши завершенные проекты"
+
+#: .\templates\home.html:907
+msgid "Company news"
+msgstr "Новости компании"
+
+#: .\templates\home.html:908
+msgid "Reviews about us"
+msgstr "Отзывы о нас"
+
+#: .\templates\home.html:913
+msgid "CONTACTS"
+msgstr "КОНТАКТЫ"
+
+#: .\templates\home.html:916
+msgid "Write us"
+msgstr "Напишите нам"
+
+
+#: .\templates\home.html:925
+msgid "Helpline"
+msgstr "Горячая линия"
