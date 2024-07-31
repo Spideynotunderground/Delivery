@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Confirmation</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Light background color */
+            text-align: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background: #333;
+            text-decoration: none;
+            color: white;
+            border-radius: 10px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="message">Are you sure, that you want to sign up with GitHub?</p>
+        <p class="message">Вы уверены, что хотите зарегистрироваться через GitHub?</p>
+        <a href="{% url 'social:begin' 'github' %}" class="button">GitHub</a>
+    </div>
+</body>
+</html>

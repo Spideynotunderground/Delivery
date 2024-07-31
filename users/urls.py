@@ -10,4 +10,5 @@ urlpatterns = [
     path('edit_profile/', views.edit_profile, name='edit_profile'),
     path('reset_password/', views.reset_password, name='reset_password'),
     path('success/', TemplateView.as_view(template_name='success.html'), name='success'),
+    path('redirect/', views.redirect_view, name='redirect'),
 ]

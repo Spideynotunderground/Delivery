@@ -69,3 +69,6 @@ def reset_password(request):
         return redirect('delivery:home')
     form = ResetPasswordForm(request.user)
     return render(request, 'reset_password.html', {'form': form})
+
+def redirect_view(request):
+    return render(request, 'redirect.html')

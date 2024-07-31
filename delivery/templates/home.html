@@ -81,8 +81,23 @@
             </div>
             {% if not user.is_authenticated %}
                 <div class="gapash">
-                    <a href="{% url 'social:begin' 'github' %}"
-                       class="button github">{% trans "Sign up with GitHub" %}</a>
+
+                    <form action="/en/users/redirect/" method="get">
+                        <button type="submit" style="
+                        background: #333; display: block;
+                        cursor: pointer;
+                        color: white;
+                        padding: 10px 20px;
+                        margin: 10px 0;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: background 0.3s ease, transform 0.3s ease;">
+                            Sign up with GitHub
+                        </button>
+                    </form>
                     <a href="{% url 'social:begin' 'gitlab' %}"
                        class="button gitlab">{% trans "Sign up with GitLab" %}</a>
                     <a href="/users/sign_up" class="button email">{% trans "Sign up with Email" %}</a>
@@ -914,50 +929,50 @@
         <div class="footer-column">
             <h3>{% trans "FOR CLIENTS" %}</h3>
             <ul>
-                <li><a href="#">{% trans "Calculate the cost of the service" %}</a></li>
-                <li><a href="#">{% trans "Personal cabinet" %}</a></li>
-                <li><a href="#">{% trans "Contract" %}</a></li>
-                <li><a href="#">{% trans "Order status" %}</a></li>
-                <li><a href="#">{% trans "Complaints" %}</a></li>
-                <li><a href="#">{% trans "FAQ" %}</a></li>
-                <li><a href="#">{% trans "Our offices" %}</a></li>
-                <li><a href="#">{% trans "Agreements and general terms" %}</a></li>
+                <li><a style="cursor: default" >{% trans "Calculate the cost of the service" %}</a></li>
+                <li><a style="cursor: default">{% trans "Personal cabinet" %}</a></li>
+                <li><a style="cursor: default">{% trans "Contract" %}</a></li>
+                <li><a style="cursor: default">{% trans "Order status" %}</a></li>
+                <li><a style="cursor: default">{% trans "Complaints" %}</a></li>
+                <li><a style="cursor: default">{% trans "FAQ" %}</a></li>
+                <li><a style="cursor: default">{% trans "Our offices" %}</a></li>
+                <li><a style="cursor: default">{% trans "Agreements and general terms" %}</a></li>
             </ul>
         </div>
         <div class="footer-column">
             <h3>{% trans "SERVICES" %}</h3>
             <ul>
-                <li><a href="#">{% trans "Express mail and parcel" %}</a></li>
-                <li><a href="#">{% trans "Complex Logistics" %}</a></li>
-                <li><a href="#">{% trans "Courier service" %}</a></li>
-                <li><a href="#">{% trans "Warehouse services" %}</a></li>
-                <li><a href="#">{% trans "E-COMMERCE" %}</a></li>
-                <li><a href="#">{% trans "International shipping" %}</a></li>
-                <li><a href="#">{% trans "Individual transportation" %}</a></li>
-                <li><a href="#">{% trans "FTL shipping" %}</a></li>
-                <li><a href="#">{% trans "LTL shipping" %}</a></li>
+                <li><a style="cursor: default">{% trans "Express mail and parcel" %}</a></li>
+                <li><a style="cursor: default">{% trans "Complex Logistics" %}</a></li>
+                <li><a style="cursor: default">{% trans "Courier service" %}</a></li>
+                <li><a style="cursor: default">{% trans "Warehouse services" %}</a></li>
+                <li><a style="cursor: default">{% trans "E-COMMERCE" %}</a></li>
+                <li><a style="cursor: default">{% trans "International shipping" %}</a></li>
+                <li><a style="cursor: default">{% trans "Individual transportation" %}</a></li>
+                <li><a style="cursor: default">{% trans "FTL shipping" %}</a></li>
+                <li><a style="cursor: default">{% trans "LTL shipping" %}</a></li>
             </ul>
         </div>
         <div class="footer-column">
             <h3>{% trans "FOR PARTNERS" %}</h3>
             <ul>
-                <li><a href="#">{% trans "Partnership" %}</a></li>
-                <li><a href="#">{% trans "API for developers" %}</a></li>
+                <li><a style="cursor: default">{% trans "Partnership" %}</a></li>
+                <li><a style="cursor: default">{% trans "API for developers" %}</a></li>
             </ul>
             <h3>{% trans "ABOUT" %}</h3>
             <ul>
-                <li><a href="#">{% trans "About DBM Express" %}</a></li>
-                <li><a href="#">{% trans "Our completed projects" %}</a></li>
-                <li><a href="#">{% trans "Company news" %}</a></li>
-                <li><a href="#">{% trans "Reviews about us" %}</a></li>
-                <li><a href="#">{% trans "Vacancies" %}</a></li>
+                <li><a style="cursor: default">{% trans "About DBM Express" %}</a></li>
+                <li><a style="cursor: default">{% trans "Our completed projects" %}</a></li>
+                <li><a style="cursor: default">{% trans "Company news" %}</a></li>
+                <li><a style="cursor: default">{% trans "Reviews about us" %}</a></li>
+                <li><a style="cursor: default">{% trans "Vacancies" %}</a></li>
             </ul>
         </div>
         <div class="footer-column">
             <h3>{% trans "CONTACTS" %}</h3>
             <ul>
-                <li><a href="#">{% trans "Contacts" %}</a></li>
-                <li><a href="#">{% trans "Write us" %}</a></li>
+                <li><a style="cursor: default">{% trans "Contacts" %}</a></li>
+                <li><a style="cursor: default">{% trans "Write us" %}</a></li>
             </ul>
             <div class="contact-info">
                 <div class="phone">
