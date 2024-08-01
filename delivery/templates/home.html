@@ -61,7 +61,7 @@
 <header class="header">
 
     <div class="header-left">
-        <img src="{% static 'images/favicon.ico' %}" alt="DBM Logo">
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
         <form action="{% url 'set_language' %}" method="post">
             {% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}"/>
