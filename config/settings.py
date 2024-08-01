@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os.path
 from pathlib import Path
 from django.utils.translation import gettext
+from django.core.wsgi import get_wsgi_application
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +29,10 @@ SECRET_KEY = 'django-insecure-q$dd3-&ws7c-9q&(ne#kztb=ap*j8fyu8a!23-23@d%ep+)o7z
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config")
+application = get_wsgi_application()
+
 
 # Application definition
 
