@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-24 18:55+0500\n"
+"POT-Creation-Date: 2024-08-01 20:19+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,317 +16,370 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: .\templates\home.html:41
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\config\settings.py:163
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:164
+msgid "Russian"
+msgstr ""
+
+#: .\delivery\templates\deliverer.html:82
+msgid "Name:"
+msgstr "Имя"
+
+#: .\delivery\templates\deliverer.html:88
+msgid "Phone:"
+msgstr "Номер Телефона"
+
+#: .\delivery\templates\deliverer.html:94
+msgid "Province:"
+msgstr "Область"
+
+#: .\delivery\templates\deliverer.html:100
+msgid "Street:"
+msgstr "Улица"
+
+#: .\delivery\templates\deliverer.html:106
+msgid "Home Number:"
+msgstr "Номер Дома"
+
+#: .\delivery\templates\home.html:98
 msgid "Sign up with GitHub"
 msgstr "Зарегистрируйтесь через GitHub"
 
-#: .\templates\home.html:43
+#: .\delivery\templates\home.html:102
 msgid "Sign up with GitLab"
 msgstr "Зарегистрируйтесь через GitLab"
 
-#: .\templates\home.html:44
+#: .\delivery\templates\home.html:103
 msgid "Sign up with Email"
 msgstr "Зарегистрируйтесь через электронную почту"
 
-#: .\templates\home.html:48
+#: .\delivery\templates\home.html:107
 msgid "Sign Out"
 msgstr "Выйти из аккаунта"
 
-#: .\templates\home.html:60
+#: .\delivery\templates\home.html:119
 msgid "Main"
 msgstr "Главная"
 
-#: .\templates\home.html:61
+#: .\delivery\templates\home.html:120
 msgid "For clients"
 msgstr "Для клиентов"
 
-#: .\templates\home.html:62
+#: .\delivery\templates\home.html:121
 msgid "Services"
 msgstr "Услуги"
 
-#: .\templates\home.html:63 .\templates\home.html:900
+#: .\delivery\templates\home.html:122 .\delivery\templates\home.html:959
 msgid "Partnership"
 msgstr "Партнерство"
 
-#: .\templates\home.html:64
+#: .\delivery\templates\home.html:123
 msgid "About"
 msgstr "О нас"
 
-#: .\templates\home.html:65 .\templates\home.html:915
+#: .\delivery\templates\home.html:124 .\delivery\templates\home.html:974
 msgid "Contacts"
 msgstr "Контакты"
 
-#: .\templates\home.html:66 .\templates\home.html:909
+#: .\delivery\templates\home.html:125 .\delivery\templates\home.html:968
 msgid "Vacancies"
 msgstr "Вакансии"
 
-#: .\templates\home.html:105 .\templates\home.html:873
+#: .\delivery\templates\home.html:164 .\delivery\templates\home.html:932
 msgid "Calculate the cost of the service"
 msgstr "Рассчитать стоимость услуги"
 
-#: .\templates\home.html:109
+#: .\delivery\templates\home.html:168
 msgid "Courier call"
 msgstr "Вызов курьера"
 
-#: .\templates\home.html:113
+#: .\delivery\templates\home.html:172
 msgid "Telegram Bot"
 msgstr "Телеграм-бот"
 
-#: .\templates\home.html:117
+#: .\delivery\templates\home.html:176
 msgid "Observe order status"
 msgstr "Наблюдать за статусом заказа"
 
-#: .\templates\home.html:121 .\templates\home.html:879
+#: .\delivery\templates\home.html:180 .\delivery\templates\home.html:938
 msgid "Our offices"
 msgstr "Наши офисы"
 
-#: .\templates\home.html:125 .\templates\home.html:875
+#: .\delivery\templates\home.html:184 .\delivery\templates\home.html:934
 msgid "Contract"
 msgstr "Договор"
 
+#: .\delivery\templates\home.html:193
 msgid "Our Services"
 msgstr "Наши услуги"
 
-#: .\templates\home.html:362
+#: .\delivery\templates\home.html:421
 msgid "For small shipments (up to 20kg)"
 msgstr "Для небольших отправлений (до 20 кг)"
 
-#: .\templates\home.html:368
+#: .\delivery\templates\home.html:427
 msgid "For business owners or carriers of large volumes (more than 20 kg)"
 msgstr "Для владельцев бизнеса или перевозчиков больших объемов (более 20 кг)"
 
-#: .\templates\home.html:374
+#: .\delivery\templates\home.html:433
 msgid ""
 "Now we will pick up the goods from your home or office and deliver to the "
 "address you specified."
-msgstr "Теперь мы заберем товар из вашего дома или офиса и доставим по указанному вами адресу."
+msgstr ""
+"Теперь мы заберем товар из вашего дома или офиса и доставим по указанному "
+"вами адресу."
 
-#: .\templates\home.html:380
+#: .\delivery\templates\home.html:439
 msgid "With us, storing goods is easier and more profitable!"
 msgstr "С нами хранить товары проще и выгоднее!"
 
-#: .\templates\home.html:386
+#: .\delivery\templates\home.html:445
 msgid "Our company for online stores ..."
 msgstr "Наша компания для интернет-магазинов ..."
 
-#: .\templates\home.html:392
+#: .\delivery\templates\home.html:451
 msgid "Delivery to several countries of the world"
 msgstr "Доставка в несколько стран мира"
 
-#: .\templates\home.html:398
+#: .\delivery\templates\home.html:457
 msgid "DBM company with all its services ..."
 msgstr "Компания DBM со всеми ее услугами..."
 
-#: .\templates\home.html:404
+#: .\delivery\templates\home.html:463
 msgid ""
 "Are you looking for a company to order professional FTL freight "
 "transportation in Uzbekistan?"
-msgstr "Ищете компанию для заказа профессиональных FTL-грузоперевозок в Узбекистане?"
+msgstr ""
+"Ищете компанию для заказа профессиональных FTL-грузоперевозок в Узбекистане?"
 
-#: .\templates\home.html:410
+#: .\delivery\templates\home.html:469
 msgid ""
 "Do you want to order professional LTL freight shipping in Uzbekistan with "
 "maximum benefit?"
-msgstr "Хотите заказать профессиональную доставку сборных грузов в Узбекистане с максимальной выгодой?"
+msgstr ""
+"Хотите заказать профессиональную доставку сборных грузов в Узбекистане с "
+"максимальной выгодой?"
 
-#: .\templates\home.html:420
+#: .\delivery\templates\home.html:479
 msgid "Our Office"
 msgstr "Наш офис"
 
-#: .\templates\home.html:457 .\templates\home.html:903
+#: .\delivery\templates\home.html:516 .\delivery\templates\home.html:962
 msgid "ABOUT"
 msgstr "ПРО НАС"
 
-#: .\templates\home.html:458
+#: .\delivery\templates\home.html:517
 msgid ""
 "Over the years, DBM Express Cargo Service LLC has cooperated with more than "
 "3000 companies. The company, which started with 1 employee, now has a team "
 "of 410 specialists."
-msgstr "За годы работы компания DBM Express Cargo Service LLC сотрудничала с более чем 3000 компаний. Компания, которая начиналась с 1 сотрудника, сейчас имеет команду из 410 специалистов."
+msgstr ""
+"За годы работы компания DBM Express Cargo Service LLC сотрудничала с более "
+"чем 3000 компаний. Компания, которая начиналась с 1 сотрудника, сейчас имеет "
+"команду из 410 специалистов."
 
-#: .\templates\home.html:464
+#: .\delivery\templates\home.html:523
 msgid "OUR MAIN GOAL"
 msgstr "НАША ГЛАВНАЯ ЦЕЛЬ"
 
-#: .\templates\home.html:465
+#: .\delivery\templates\home.html:524
 msgid ""
 "Connect people and drive business growth in a fast-moving world with "
 "integrated, innovative logistics solutions"
-msgstr "Объединяйте людей и стимулируйте рост бизнеса в быстро меняющемся мире с помощью интегрированных, инновационных логистических решений"
+msgstr ""
+"Объединяйте людей и стимулируйте рост бизнеса в быстро меняющемся мире с "
+"помощью интегрированных, инновационных логистических решений"
 
-#: .\templates\home.html:474
+#: .\delivery\templates\home.html:533
 msgid "Why do thousands of customers choose us?"
 msgstr "Почему тысячи клиентов выбирают нас?"
 
-#: .\templates\home.html:727
-#, python-format
+#: .\delivery\templates\home.html:786
 msgid "100 percent guarantee"
 msgstr "100 процентная гарантия"
 
-#: .\templates\home.html:728
+#: .\delivery\templates\home.html:787
 msgid ""
 "All items are packaged once. It is guaranteed that the goods will not be "
 "lost or damaged"
-msgstr "Все товары упакованы один раз. Гарантируется, что товар не будет утерян или поврежден"
+msgstr ""
+"Все товары упакованы один раз. Гарантируется, что товар не будет утерян или "
+"поврежден"
 
-#: .\templates\home.html:758
+#: .\delivery\templates\home.html:817
 msgid "24/7 at your service"
 msgstr "24/7 к вашим услугам"
 
-#: .\templates\home.html:759
+#: .\delivery\templates\home.html:818
 msgid ""
 "You can send, receive mail or contact the call center at any time of the day "
 "or night. (Except on public holidays)"
-msgstr "Вы можете отправлять, получать почту или обращаться в колл-центр в любое время дня и ночи. (За исключением государственных праздников)"
+msgstr ""
+"Вы можете отправлять, получать почту или обращаться в колл-центр в любое "
+"время дня и ночи. (За исключением государственных праздников)"
 
-#: .\templates\home.html:788
+#: .\delivery\templates\home.html:847
 msgid "As soon as possible"
 msgstr "Быстрее некуда!"
 
-#: .\templates\home.html:789
+#: .\delivery\templates\home.html:848
 msgid ""
 "Delivery within Uzbekistan within 24 hours, to international destinations at "
 "any time you specify"
-msgstr "Доставка по Узбекистану в течение 24 часов, по международным направлениям в любое указанное вами время."
+msgstr ""
+"Доставка по Узбекистану в течение 24 часов, по международным направлениям в "
+"любое указанное вами время."
 
-#: .\templates\home.html:803
+#: .\delivery\templates\home.html:862
 msgid "Storage conditions"
 msgstr "Условия хранения"
 
-#: .\templates\home.html:804
+#: .\delivery\templates\home.html:863
 msgid ""
 "In our 3900 m2 warehouse, each product is stored in the right conditions."
-msgstr "На нашем складе площадью 3900 м2 каждый продукт хранится в правильных условиях."
+msgstr ""
+"На нашем складе площадью 3900 м2 каждый продукт хранится в правильных "
+"условиях."
 
-#: .\templates\home.html:825
+#: .\delivery\templates\home.html:884
 msgid "Private car park"
 msgstr "Частная парковка"
 
-#: .\templates\home.html:826
+#: .\delivery\templates\home.html:885
 msgid ""
 "We have over 90 different types of vehicles available for customer service."
-msgstr "Для обслуживания клиентов у нас имеется более 90 различных типов транспортных средств."
+msgstr ""
+"Для обслуживания клиентов у нас имеется более 90 различных типов "
+"транспортных средств."
 
-#: .\templates\home.html:848
+#: .\delivery\templates\home.html:907
 msgid "Free services"
 msgstr "Бесплатные услуги"
 
-#: .\templates\home.html:849
+#: .\delivery\templates\home.html:908
 msgid "Free services. We provide free services of SMS alert, detailing, etc."
-msgstr "Бесплатные услуги. Мы предоставляем бесплатные услуги смс-оповещения, детализации и т.д."
+msgstr ""
+"Бесплатные услуги. Мы предоставляем бесплатные услуги смс-оповещения, "
+"детализации и т.д."
 
-#: .\templates\home.html:857
+#: .\delivery\templates\home.html:916
 msgid "ORDER EASILY"
 msgstr "ЗАКАЗАЖИТЕ ЛЕГКО"
 
-#: .\templates\home.html:858
+#: .\delivery\templates\home.html:917
 msgid "Order easily and conveniently through our official telegram bot"
 msgstr "Заказывайте легко и удобно через наш официальный телеграм-бот"
 
-#: .\templates\home.html:859
+#: .\delivery\templates\home.html:918
 msgid "chat with bot"
 msgstr "чат с ботом"
 
-#: .\templates\home.html:871
+#: .\delivery\templates\home.html:930
 msgid "FOR CLIENTS"
 msgstr "ДЛЯ КЛИЕНТОВ"
 
-#: .\templates\home.html:874
+#: .\delivery\templates\home.html:933
 msgid "Personal cabinet"
 msgstr "Личный кабинет"
 
-#: .\templates\home.html:876
+#: .\delivery\templates\home.html:935
 msgid "Order status"
 msgstr "Статус заказа"
 
-#: .\templates\home.html:877
+#: .\delivery\templates\home.html:936
 msgid "Complaints"
 msgstr "Жалобы"
 
-#: .\templates\home.html:878
+#: .\delivery\templates\home.html:937
 msgid "FAQ"
 msgstr "Часто задаваемые вопросы"
 
-#: .\templates\home.html:880
+#: .\delivery\templates\home.html:939
 msgid "Agreements and general terms"
 msgstr "Соглашения и общие условия"
 
-#: .\templates\home.html:884
+#: .\delivery\templates\home.html:943
 msgid "SERVICES"
 msgstr "УСЛУГИ"
 
-#: .\templates\home.html:886
+#: .\delivery\templates\home.html:945
 msgid "Express mail and parcel"
 msgstr "Экспресс-почта и посылки"
 
-#: .\templates\home.html:887
+#: .\delivery\templates\home.html:946
 msgid "Complex Logistics"
 msgstr "Комплексная логистика"
 
-#: .\templates\home.html:888
+#: .\delivery\templates\home.html:947
 msgid "Courier service"
 msgstr "Курьерская служба"
 
-#: .\templates\home.html:889
+#: .\delivery\templates\home.html:948
 msgid "Warehouse services"
 msgstr "Складские услуги"
 
-#: .\templates\home.html:890
+#: .\delivery\templates\home.html:949
 msgid "E-COMMERCE"
 msgstr "ЭЛЕКТРОННАЯ КОММЕРЦИЯ"
 
-#: .\templates\home.html:891
+#: .\delivery\templates\home.html:950
 msgid "International shipping"
 msgstr "Международная доставка"
 
-#: .\templates\home.html:892
+#: .\delivery\templates\home.html:951
 msgid "Individual transportation"
 msgstr "Индивидуальный транспорт"
 
-#: .\templates\home.html:893
+#: .\delivery\templates\home.html:952
 msgid "FTL shipping"
 msgstr "FTL-доставка"
 
-#: .\templates\home.html:894
+#: .\delivery\templates\home.html:953
 msgid "LTL shipping"
 msgstr "Доставка сборных грузов"
 
-#: .\templates\home.html:898
+#: .\delivery\templates\home.html:957
 msgid "FOR PARTNERS"
 msgstr "ДЛЯ ПАРТНЕРОВ"
 
-#: .\templates\home.html:901
+#: .\delivery\templates\home.html:960
 msgid "API for developers"
 msgstr "API для разработчиков"
 
-#: .\templates\home.html:905
-msgid "About DMB Express"
+#: .\delivery\templates\home.html:964
+#, fuzzy
+#| msgid "About DMB Express"
+msgid "About DBM Express"
 msgstr "О DBM Express"
 
-#: .\templates\home.html:906
+#: .\delivery\templates\home.html:965
 msgid "Our completed projects"
 msgstr "Наши завершенные проекты"
 
-#: .\templates\home.html:907
+#: .\delivery\templates\home.html:966
 msgid "Company news"
 msgstr "Новости компании"
 
-#: .\templates\home.html:908
+#: .\delivery\templates\home.html:967
 msgid "Reviews about us"
 msgstr "Отзывы о нас"
 
-#: .\templates\home.html:913
+#: .\delivery\templates\home.html:972
 msgid "CONTACTS"
 msgstr "КОНТАКТЫ"
 
-#: .\templates\home.html:916
+#: .\delivery\templates\home.html:975
 msgid "Write us"
 msgstr "Напишите нам"
 
-
-#: .\templates\home.html:925
+#: .\delivery\templates\home.html:984
 msgid "Helpline"
 msgstr "Горячая линия"
+

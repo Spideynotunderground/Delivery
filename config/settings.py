@@ -15,7 +15,6 @@ from pathlib import Path
 from django.utils.translation import gettext
 from django.core.wsgi import get_wsgi_application
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,9 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config")
-application = get_wsgi_application()
-
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config")
+# application = get_wsgi_application()
 
 # Application definition
 
@@ -166,11 +164,9 @@ LANGUAGES = (
     ('ru', gettext('Russian')),
 )
 
-
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
