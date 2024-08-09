@@ -36,8 +36,6 @@
 {% endblock %} -->
 
 {% load static %}
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,15 +43,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .signup-form div {
+            margin-bottom: 20px;
+        }
+
+        .signup-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f0f7ff;
+        }
+
+        .signup-form .g-recaptcha {
+            margin-bottom: 20px;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #8e44ad;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button.is-warning:hover,
+        .button.is-warning:focus {
+            background-color: #74C69D;
+            color: #ffffff;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 15px;
+            font-size: 0.875rem;
+            border: 2px solid #ffdd57;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #ffdd57;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button.is-warning {
+            color: #74C69D;
+            border-color: #74C69D;
+        }
+
+        .button.is-outlined {
+            background-color: transparent;
+            border: 2px solid #74C69D;
+        }
+
+        .button.is-small {
+            font-size: 0.75rem;
+            padding: 10px 15px;
+
+        }
+
+        .signup-form button:hover {
+            background-color: #732d91;
+        }
+
+        .signup-prompt {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
+
     <div class="signup-form">
         <h1>Sign Up</h1>
+
         <form method="post">
             {% csrf_token %}
+
             {{ form.as_p }}
-            <button class="btn-submit" type="submit">Sign Up</button>
+
+            <button type="submit">Submit</button>
 
             <p class="signup-prompt">
                 Already have an account? <a href="{% url 'users:sign_in' %}">Sign in here</a>
@@ -61,8 +167,7 @@
         </form>
     </div>
 </div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
-
-
 </html>
 

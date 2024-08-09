@@ -1,4 +1,4 @@
-{% load static i18n %}
+{% load static i18n socialaccount %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -98,6 +98,7 @@
                             {% trans "Sign up with GitHub" %}
                         </button>
                     </form>
+                    
                     <a href="{% url 'social:begin' 'gitlab' %}"
                        class="button gitlab">{% trans "Sign up with GitLab" %}</a>
                     <a href="/users/sign_up" class="button email">{% trans "Sign up with Email" %}</a>

@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import qr
 from .forms import ReceiverForm, ContractForm
@@ -11,11 +12,13 @@ def home(request):
     return render(request, 'home.html')
 
 
+@login_required
 def test(request):
-    photos = qr.objects.all()
-    return render(request, 'test.html', {'photos': photos})
-
-
+    try:
+        photo = qr.objects.get(name=request.user)
+    except qr.DoesNotExist:
+        photo = None
+    return render(request, 'test.html', {'photo': photo})
 def calc(request):
     return render(request, 'calculate.html')
 

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +63,19 @@
             outline: none;
         }
 
-        button {
+        .butt.is-warning {
+            color: #74C69D;
+            border-color: #74C69D;
+        }
+
+        .butt.is-warning:hover,
+        .butt.is-warning:focus {
+            background-color: #74C69D;
+            color: #ffffff;
+        }
+
+
+        .button {
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
@@ -74,9 +87,26 @@
             align-self: center;
         }
 
-        button:hover {
+        .button:hover {
             background-color: #0056b3;
         }
+
+        .butt.is-warning {
+        color: #74C69D;
+        border-color: #74C69D;
+    }
+
+    .butt.is-outlined {
+        border-radius: 15px;
+        background-color: transparent;
+        border: 2px solid #74C69D;
+    }
+
+    .butt.is-small {
+        font-size: 0.75rem;
+        padding: 10px 15px;
+
+    }
 
         .form-field {
             margin-bottom: 20px;
@@ -84,13 +114,72 @@
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h2>Contract Form</h2>
-        <form action="{% url 'delivery:contract' %}" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+<div class="form-container">
+    <h2>Contract Form</h2>
+    <form action="{% url 'delivery:contract' %}" method="post">
+        {% csrf_token %}
+
+        <div>
+            <label for="{{ form.name.id_for_label }}">Name:</label>
+            {{ form.name }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.last_name.id_for_label }}">Last Name:</label>
+            {{ form.last_name }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.patronymic.id_for_label }}">Patronymic:</label>
+            {{ form.patronymic }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.number.id_for_label }}">Number:</label>
+            {{ form.number }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.company_name.id_for_label }}">Company Name:</label>
+            {{ form.company_name }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.position.id_for_label }}">Position:</label>
+            {{ form.position }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.city.id_for_label }}">City:</label>
+            {{ form.city }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.address.id_for_label }}">Address:</label>
+            {{ form.address }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.description.id_for_label }}">Description:</label>
+            {{ form.description }}
+            <br><br>
+        </div>
+
+        <div>
+            <label for="{{ form.size.id_for_label }}">Size:</label>
+            {{ form.size }}
+        </div>
+
+        <button type="submit" class="button">Submit</button>
+    </form>
+</div>
 </body>
 </html>

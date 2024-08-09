@@ -1,20 +1,16 @@
-{% load static %} {% block content %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>QR Codes</title>
 </head>
 <body>
-    <h1>Hello world</h1>
-
-    {% for photo in photos %}
-
-
-    <img src="{{ photo.qr_code.url }}" width="300">
-    {% endfor %}    
+    <h2>QR Codes</h2>
+    <ul>
+        {% if photo %}
+            <img src="{{ photo.qr_code.url }}" width="300">
+        {% else %}
+            <p>No QR code available for the user.</p>
+        {% endif %}
+    </ul>
 </body>
 </html>
-
-{% endblock %}

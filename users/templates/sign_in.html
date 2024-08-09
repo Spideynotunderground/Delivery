@@ -1,5 +1,4 @@
 {% load socialaccount %}
-{% load i18n %}
 {% block auth %}
 
     {% load static %}
@@ -11,18 +10,132 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign In</title>
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
+
+    <style>
+        /* Container and Form Styling */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .auth-form {
+            background-color: white; /* Solid white background */
+            padding: 10px 10px; /* More padding for left and right sides */
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Hide overflow */
+        }
+
+        /* Form Elements */
+        .title {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+        }
+
+        .input-container label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #F5F7FF;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #8A2BE2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .button.is-warning:hover,
+        .button.is-warning:focus {
+            background-color: #74C69D;
+            color: #ffffff;
+        }
+
+        .btn-submit:hover {
+            background-color: #7B26C9;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 15px;
+            font-size: 0.875rem;
+            border: 2px solid #ffdd57;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #ffdd57;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button.is-warning {
+            color: #74C69D;
+            border-color: #74C69D;
+        }
+
+        .button.is-outlined {
+            background-color: transparent;
+            border: 2px solid #74C69D;
+        }
+
+        .button.is-small {
+            font-size: 0.75rem;
+            padding: 10px 15px;
+
+        }
+
+        .google-login {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #8A2BE2;
+            text-decoration: none;
+        }
+
+        .signup-prompt {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-prompt a {
+            color: #8A2BE2;
+            text-decoration: none;
+        }
+
+
+    </style>
+
+
     <div class="container">
+
+
         <div class="auth-form">
-            {% if messages %}
-                <ul class="message-header">
-                    {% for message in messages %}
-                        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
+
+
             <form method="post">
                 <h1 class="title">Sign In</h1>
                 {% csrf_token %}
@@ -31,19 +144,39 @@
                         {{ form.errors }}
                     </div>
                 {% endif %}
-                {% for field in form %}
-                    <div class="input-group">
-                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                        {{ field }}
-                    </div>
-                {% endfor %}
+
+                <div class="input-container">
+                    <label for="{{ form.username.id_for_label }}">Write username:</label>
+                    {{ form.username }}
+                </div>
+
+                <div class="input-container">
+                    <label for="{{ form.password.id_for_label }}">Write password</label>
+                    {{ form.password }}
+                </div>
+
                 <button type="submit" class="btn-submit">Sign in</button>
-                <a href="{% provider_login_url 'google' %}">Sign in with Google</a>
+
+                <a href="{{ google_oauth2_url }}" style="background: #333; display: block;
+        cursor: pointer;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        text-decoration: none;
+        text-align: center;
+        transition: background 0.3s ease, transform 0.3s ease;"
+                   class="google-login">Sign in with Google</a>
+                <a href="{% url 'users:sign_in' %}?language=en">Sign in with Google (English)</a>
+                <a href="{% url 'users:sign_in' %}?language=ru">Sign in with Google (Russian)</a>
+
                 <p class="signup-prompt">
-                    Don't have an account? <a href="{% url 'users:sign_up' %}">Sign up here</a>
+                    Don't have an account? <a
+                        href="{% url 'users:sign_up' %}">Sign up here</a>
                 </p>
             </form>
-
         </div>
     </div>
     </body>

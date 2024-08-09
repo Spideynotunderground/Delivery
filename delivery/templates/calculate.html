@@ -1,3 +1,4 @@
+{% load i18n static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,8 +67,9 @@
 
 <body>
     <div class="container">
+        
         <h1>How much does your product weigh? (in kg)</h1>
-        <input type="number" id="inputNumber" placeholder="Enter a number">
+        <input type="number" id="inputNumber" placeholder="">
         <button onclick="multiplyByFour()">Count</button>
         <p id="result"></p>
     </div>
@@ -79,7 +81,7 @@
 
             // Check if the input is a number
             if (isNaN(inputNumber) || inputNumber === "" || inputNumber <=0) {
-                document.getElementById('result').innerText = "Please enter a valid number.";
+                document.getElementById('result').innerText = "Please, enter a valid number";
                 return;
             }
             if(inputNumber >= 100000) {

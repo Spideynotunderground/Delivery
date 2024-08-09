@@ -3,11 +3,12 @@ import qrcode
 from io import BytesIO
 from django.core.files import File
 from PIL import Image, ImageDraw
+from django.contrib.auth.models import User
 from django_recaptcha.fields import ReCaptchaField
 
 
 class qr(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
     qr_code = models.ImageField(upload_to='qr_codes', blank=True)
 
     def __str__(self):
