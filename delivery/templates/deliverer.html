@@ -117,17 +117,7 @@
 
     <div class="form-container">
         <h2>Deliverer Form</h2>
-        <form action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}"/>
-            <button type="submit" class="button is-warning is-outlined is-small" style="margin-bottom: 15px;" name="language" value="en">
-                English
-            </button>
-            <button type="submit" class="button is-warning is-outlined is-small" style="margin-bottom: 15px;" name="language" value="ru">
-                Русский
-            </button>
-        </form>
-
+        
         <form method="post" >
         {% csrf_token %}
         <div>

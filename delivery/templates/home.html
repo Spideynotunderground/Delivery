@@ -136,7 +136,6 @@
                     </div>
                 </div>
             </div>
-            {% if user.is_authenticated %}
             <div class="sidebar">
                 <a href="calc" class="service-calculator">
                     <i class="fa-solid fa-calculator"></i>
@@ -157,11 +156,7 @@
 
                 </a>
             </div>
-            {% else %}
-            <p>
-                {% trans "Please, authenticate first <br> to use other functions" %}
-            </p>
-            {% endif %}
+            
         </div>
     </section>
     <section id="services" class="bg-[#e3ffd7]">
