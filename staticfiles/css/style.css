@@ -11,52 +11,143 @@ body {
 }
 
 /* Header Container */
+/* Base Styles */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #dcdcdc; /* Light gray border */
+    background-color: #fff; /* Adjust background color as needed */
 }
 
-/* Left Section: Logo and Certification */
 .header-left {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-.header-left img {
-  height: 50px;
-  margin-right: 20px;
+.header-left .button {
+    margin: 0 5px; /* Space between buttons */
 }
 
 .certification {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-.certification img {
-  height: 30px;
-  margin-right: 10px;
+.certification .flex-col {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
 }
+
+.gapash {
+    display: flex;
+    align-items: center;
+}
+
+/* Button Styles */
+.button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .certification {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .certification .flex-col {
+        margin-left: 0;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Responsive for Smaller Devices */
+@media (max-width: 480px) {
+    .header {
+        padding: 5px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
 
 /* Center Section: Navigation */
+/* Navigation Container */
 .nav {
-  display: flex;
-  justify-content: center;
-  flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Navigation Links */
 .nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #000;
-  font-size: 16px;
+    text-decoration: none;
+    color: #003399; /* Default link color */
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 20px; /* Consistent padding */
+    border: 1px solid #d3d3d3; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in total width/height */
+    display: inline-block; /* Make links block elements for consistent size */
+    height: 40px; /* Consistent height */
+    line-height: 40px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
 }
 
+/* Hover Effect */
 .nav a:hover {
-  color: #f60;
+    background-color: #f0f0f0; /* Light gray background on hover */
+    color: #f60; /* Hover text color */
+    border-color: #bbb; /* Slightly darker gray on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center links */
+    }
+
+    .nav a {
+        margin: 10px 0; /* Adjust margin for vertical stacking */
+        width: 100%; /* Full width for each link */
+        box-sizing: border-box; /* Ensure padding and border are included in total width */
+    }
 }
 
 /* Right Section: Contact and Icons */
@@ -195,7 +286,7 @@ body {
   position: relative;
   width: 70%;
   height: 100vh;
-  background-image: url("your-image-path"); /* Replace with the actual image path */
+ /* Replace with the actual image path */
   background-size: cover;
   background-position: center;
   color: white;
@@ -259,13 +350,6 @@ body {
 }
 
 /* Specific styles for each link (example) */
-.sidebar .service-calculator::before {
-  content: url("calculator-icon-path"); /* Replace with the actual icon path */
-}
-
-.sidebar .courier-call::before {
-  content: url("courier-icon-path"); /* Replace with the actual icon path */
-}
 
 #services {
   background: rgba(0, 0, 0, 0.1);
@@ -372,43 +456,45 @@ body {
 }
 
 .sidebar a {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 15px; /* Consistent padding for all buttons */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding does not affect size */
+    transition: background-color 0.3s;
+    width: 100%; /* Make buttons stretch to container width */
 }
 
 .sidebar a:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .sidebar a i {
-  margin-right: 10px;
-  font-size: 1.5em;
+    margin-right: 10px;
+    font-size: 1.5em;
 }
 
 .sidebar a span {
-  font-size: 1em;
+    font-size: 1em;
 }
 
-@media (max-width: 600px) {
-  .sidebar a {
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 15px;
-  }
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Ensure sidebar takes full width on small screens */
+    }
 
-  .sidebar a span {
-    font-size: 1.4em;
-    color: #000;
-    font-weight: bold;
-  }
+    .sidebar a {
+        width: 100%; /* Buttons take full width of the sidebar */
+        padding: 15px; /* Adjust padding as needed */
+        font-size: 1.2em; /* Adjust font size for better readability */
+    }
 }
 
 iframe {

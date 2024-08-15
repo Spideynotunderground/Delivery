@@ -11,52 +11,165 @@ body {
 }
 
 /* Header Container */
+/* Base Styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-bottom: 1px solid #dcdcdc; /* Light gray border */
+  background-color: #fff; /* Adjust background color as needed */
 }
 
-/* Left Section: Logo and Certification */
 .header-left {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
-.header-left img {
-  height: 50px;
-  margin-right: 20px;
+.header-left .button {
+  margin: 0 5px; /* Space between buttons */
 }
 
 .certification {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
-.certification img {
-  height: 30px;
-  margin-right: 10px;
+.certification .flex-col {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.gapash {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the sign-up buttons horizontally */
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+/* Button Styles */
+.button {
+  background: #333;
+  color: white;
+  padding: 10px 30px; /* Increased padding on the left and right */
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  flex-grow: 1; /* Allows buttons to expand to fit available space */
+  max-width: 200px; /* Limits the button width */
+}
+
+.button:hover {
+  background: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .certification {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .certification .flex-col {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .gapash {
+    flex-direction: column; /* Stack the buttons vertically on smaller screens */
+    align-items: center;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive for Smaller Devices */
+@media (max-width: 480px) {
+  .header {
+    padding: 5px;
+  }
+
+  .button {
+    padding: 8px 20px; /* Adjusted padding for smaller screens */
+    font-size: 14px;
+  }
+
+  .header-left form,
+  .gapash form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center buttons within the form */
+    width: 100%;
+  }
 }
 
 /* Center Section: Navigation */
+/* Navigation Container */
 .nav {
   display: flex;
   justify-content: center;
-  flex: 1;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Navigation Links */
 .nav a {
-  margin: 0 15px;
   text-decoration: none;
-  color: #000;
+  color: #003399; /* Default link color */
   font-size: 16px;
+  margin: 10px;
+  padding: 10px 20px; /* Consistent padding */
+  border: 1px solid #d3d3d3; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Ensure padding and border are included in total width/height */
+  display: inline-block; /* Make links block elements for consistent size */
+  height: 40px; /* Consistent height */
+  line-height: 40px; /* Center text vertically */
+  text-align: center; /* Center text horizontally */
 }
 
+/* Hover Effect */
 .nav a:hover {
-  color: #f60;
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #f60; /* Hover text color */
+  border-color: #bbb; /* Slightly darker gray on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; /* Center links */
+  }
+
+  .nav a {
+    margin: 10px 0; /* Adjust margin for vertical stacking */
+    width: 100%; /* Full width for each link */
+    box-sizing: border-box; /* Ensure padding and border are included in total width */
+  }
 }
 
 /* Right Section: Contact and Icons */
@@ -136,7 +249,6 @@ body {
   width: 100%;
 }
 
-
 .navbar-links a {
   text-decoration: none;
   color: #003399; /* Change to match your desired color */
@@ -195,7 +307,6 @@ body {
   position: relative;
   width: 70%;
   height: 100vh;
-  background-image: url("your-image-path"); /* Replace with the actual image path */
   background-size: cover;
   background-position: center;
   color: white;
@@ -206,13 +317,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.1
-  ); /* Optional overlay for better text readability */
+  height: 100%; /* Default height for desktop */
+  background: rgba(0, 0, 0, 0.1); /* Optional overlay for better text readability */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,6 +329,43 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+/* Remove gray background and adjust layout for mobile screens */
+@media (max-width: 768px) {
+  .main-content {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .main-content .overlay {
+    height: auto; /* Allow height to adjust based on content */
+    background: transparent; /* Remove gray background */
+  }
+
+  .main-content .overlay img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .main-content .overlay {
+    height: auto; /* Allow height to adjust based on content */
+    background: transparent; /* Remove gray background */
+  }
+
+  .main-content .overlay img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto;
+  }
+}
+
+
 
 .sidebar {
   width: 30%;
@@ -259,13 +402,6 @@ body {
 }
 
 /* Specific styles for each link (example) */
-.sidebar .service-calculator::before {
-  content: url("calculator-icon-path"); /* Replace with the actual icon path */
-}
-
-.sidebar .courier-call::before {
-  content: url("courier-icon-path"); /* Replace with the actual icon path */
-}
 
 #services {
   background: rgba(0, 0, 0, 0.1);
@@ -374,13 +510,18 @@ body {
 .sidebar a {
   display: flex;
   align-items: center;
-  padding: 10px;
+  justify-content: center; /* Center content horizontally */
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 15px; /* Consistent padding for all buttons */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  text-decoration: none;
-  color: #333;
+  box-sizing: border-box; /* Ensure padding does not affect size */
   transition: background-color 0.3s;
+  width: 100%; /* Make buttons stretch to container width */
 }
 
 .sidebar a:hover {
@@ -396,18 +537,15 @@ body {
   font-size: 1em;
 }
 
-@media (max-width: 600px) {
-  .sidebar a {
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 15px;
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Ensure sidebar takes full width on small screens */
   }
 
-  .sidebar a span {
-    font-size: 1.4em;
-    color: #000;
-    font-weight: bold;
+  .sidebar a {
+    width: 100%; /* Buttons take full width of the sidebar */
+    padding: 15px; /* Adjust padding as needed */
+    font-size: 1.2em; /* Adjust font size for better readability */
   }
 }
 
@@ -488,19 +626,42 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  .container {
+  .new-container {
     flex-direction: column;
   }
 
-  .goal .icons {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .about,
+  .goal {
+    padding: 20px;
+    text-align: center; /* Center-align text on mobile */
   }
 
-  .goal .icons a {
-    margin: 10px;
+  .about-content,
+  .goal-content {
+    top: 50%; /* Position content in the middle */
+    transform: translateY(-50%); /* Vertically center the content */
+    width: 90%; /* Reduce width to fit within mobile screens */
+    margin: 0 auto; /* Center the content horizontally */
+    text-align: center; /* Center-align text */
+  }
+
+  .about-content h2,
+  .goal-content h2 {
+    font-size: 1.8em; /* Adjust font size for mobile */
+  }
+
+  .about-content p,
+  .goal-content p {
+    font-size: 1.1em; /* Adjust paragraph font size */
+  }
+
+  .plane1,
+  .plane2 {
+    width: 100%; /* Make images responsive */
+    height: auto;
   }
 }
+
 
 .features-container {
   display: flex;
@@ -601,7 +762,6 @@ iframe {
 .gapash {
   display: flex;
   gap: 50px;
-  margin-left: 50px;
   margin-top: 10px;
   flex-direction: row;
 }
@@ -611,7 +771,7 @@ a.button {
   background: #4caf50;
   color: white;
   padding: 10px 20px;
-  margin: 10px 0;
+  margin: 10px 10px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -636,7 +796,7 @@ a.button {
 
 a.button:hover {
   background: #45a049;
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 a.button.google {
@@ -646,7 +806,6 @@ a.button.google {
 a.button.google:hover {
   background: #c23321;
 }
-
 
 a.button.github {
   background: #333;
@@ -690,8 +849,6 @@ a.button.email:hover {
   margin: 10px;
   min-width: 200px;
 }
-
-
 
 .footer-column h3 {
   color: #ff7f00;

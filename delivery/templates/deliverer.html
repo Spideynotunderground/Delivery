@@ -131,31 +131,31 @@
         <form method="post" >
         {% csrf_token %}
         <div>
-            <label for="{{ form.name.id_for_label }}">{% trans  "Name:" %}</label>
+            <label for="{{ form.name.id_for_label }}">Name:</label>
             {{ form.name }}
             <br>
             <br>
         </div>
         <div>
-            <label for="{{ form.phone.id_for_label }}">{% trans "Phone:" %}</label>
+            <label for="{{ form.phone.id_for_label }}">Phone:</label>
             {{ form.phone }}
             <br>
             <br>
         </div>
         <div>
-            <label for="{{ form.province.id_for_label }}">{% trans "Province:" %}</label>
+            <label for="{{ form.province.id_for_label }}">Province:</label>
             {{ form.province }}
             <br>
             <br>
         </div>
         <div>
-            <label for="{{ form.street.id_for_label }}">{% trans "Street:" %}</label>
+            <label for="{{ form.street.id_for_label }}">Street:</label>
             {{ form.street }}
             <br>
             <br>
         </div>
         <div>
-            <label for="{{ form.home_number.id_for_label }}">{% trans "Home Number:" %}</label>
+            <label for="{{ form.home_number.id_for_label }}">Home Number:</label>
             {{ form.home_number }}
         </div>
         <button class="cool" type="submit">Submit</button>

@@ -1,5 +1,5 @@
 {% block auth %}
-{% load socialaccount %}
+    {% load socialaccount %}
 
     {% load static %}
 
@@ -157,20 +157,18 @@
 
                 <button type="submit" class="btn-submit">Sign in</button>
 
-                <a href="{{ google_oauth2_url }}" style="background: #333; display: block;
-        cursor: pointer;
-        color: white;
-        padding: 10px 20px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        text-decoration: none;
-        text-align: center;
-        transition: background 0.3s ease, transform 0.3s ease;"
-                   class="google-login">Sign in with Google</a>
-                <a href="{% url 'users:sign_in' %}?language=en">Sign in with Google (English)</a>
-                <a href="{% url 'users:sign_in' %}?language=ru">Sign in with Google (Russian)</a>
+                <a href="{% provider_login_url 'google' %}" style="
+                        background: #629928; display: block;
+                        cursor: pointer;
+                        color: white;
+                        padding: 10px 20px;
+                        margin: 10px 0;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: background 0.3s ease, transform 0.3s ease;">Sign in with Google</a>
 
                 <p class="signup-prompt">
                     Don't have an account? <a
