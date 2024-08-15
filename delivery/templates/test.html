@@ -1,16 +1,19 @@
+{% load static i18n %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>QR Codes</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h2>QR Codes</h2>
+    <a href="{% url 'delivery:home' %}" class="button is-warning is-outlined is-small">{% trans 'Back to home' %}</a>
     <ul>
         {% if photo %}
             <img src="{{ photo.qr_code.url }}" width="300">
         {% else %}
             <p>No QR code available for the user.</p>
         {% endif %}
+
     </ul>
 </body>
 </html>
