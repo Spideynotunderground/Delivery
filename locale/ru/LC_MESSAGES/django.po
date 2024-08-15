@@ -46,8 +46,8 @@ msgid "Sign Out"
 msgstr "Выйти из аккаунта"
 
 #: .\delivery\templates\home.html:100
-msgid "View the profile name"
-msgstr "Посмотреть название профиля"
+msgid "View the profile details"
+msgstr "Посмотреть детали профиля"
 
 #: .\delivery\templates\home.html:142 .\delivery\templates\home.html:904
 msgid "Calculate the cost of the service"
