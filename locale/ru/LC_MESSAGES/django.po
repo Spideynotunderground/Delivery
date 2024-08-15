@@ -38,7 +38,7 @@ msgstr "Зарегистрируйтесь через GitLab"
 
 #: .\delivery\templates\home.html:91
 msgid "Sign up with Email"
-msgstr "Зарегистрируйтесь через электронную почту"
+msgstr "Зарегистрируйтесь через эл. почту"
 
 #: .\delivery\templates\home.html:96
 #: .\users\templates\allauth\layouts\base.html:55
