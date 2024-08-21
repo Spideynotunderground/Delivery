@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q$dd3-&ws7c-9q&(ne#kztb=ap*j8fyu8a!23-23@d%ep+)o7z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', False)
 
 ALLOWED_HOSTS = ['*']
 
@@ -123,8 +123,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRES_DB', 'postgres'),
+        'USER': os.environ.get('POSTGRES_USER', 'postgres'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', ''),
+        'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
+        'PORT': os.environ.get('POSTGRES_PORT', 5432),
     }
 }
 
@@ -234,3 +238,8 @@ RECAPTCHA_PRIVATE_KEY = '6LfPdggqAAAAAAqnN9iV17p3G9Kg8cauuQTSVMJi'
 RECAPTCHA_ERROR_MSG = {
     'required': 'Please complete reCAPTCHA',
 }
+
+try:
+    from .settings_dev import *
+except ImportError:
+    pass

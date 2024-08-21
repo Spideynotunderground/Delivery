@@ -24,3 +24,8 @@ urlpatterns += i18n_patterns(
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += staticfiles_urlpatterns()
+
+admin.site.site_header = "DBM Admin Panel"
+admin.site.site_title = "Admin Panel"
+
