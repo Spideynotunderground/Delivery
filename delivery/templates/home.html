@@ -81,11 +81,9 @@
                 {% if not user.is_authenticated %}
                 <div class="gapash">
 
-                    <form action="/en/users/redirect/" method="get">
-                        <a type="submit" class="button github" style="margin-left: 10px;">
+                    <a href="{% url 'users:redirect' %}" type="submit" class="button github" style="margin-left: 10px;">
                             {% trans "Sign up with GitHub" %}
-                            </button>
-                    </form>
+                    </a>
 
                     <a href="{% url 'social:begin' 'gitlab' %}" class="button gitlab">{% trans "Sign up with GitLab" %}</a>
                     <a href="{% url 'users:sign_up' %}" class="button email">{% trans "Sign up with Email" %}</a>
